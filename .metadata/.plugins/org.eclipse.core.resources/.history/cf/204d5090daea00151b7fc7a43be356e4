@@ -1,0 +1,36 @@
+/* file: magicSquare.java
+ * Description: Serves as the main execution class for project 1 in SER216
+ * @author Jordan Partridge
+ * 
+ * 
+ * 
+ */
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashSet;
+import java.util.Set; 
+public class magicSquare {
+	public static void main(String args[]) throws IOException{
+	    BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
+
+		System.out.println("Please enter numbers for magic square:");
+		String[] values = stdin.readLine().split("\\s+");
+		System.out.println(values.length);
+		System.out.println(validateDupicates(values));
+	}
+	/*
+	 * Returns True if no duplicates are found used as a factor to determine if values represent
+	 * a valid magic square
+	 */
+	public static boolean validateDupicates(String[] values){
+		 Set<String> lump = new HashSet<String>();
+		  for (String i : values)
+		  {
+		    if (lump.contains(i)) return true;
+		    lump.add(i);
+		  }
+		  return false;
+	}
+}
