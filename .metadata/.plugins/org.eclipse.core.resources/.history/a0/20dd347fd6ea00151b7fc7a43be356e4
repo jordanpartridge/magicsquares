@@ -1,0 +1,19 @@
+/* file: magicSquare.java
+ * Description: Serves as the main execution class for project 1 in SER216
+ * @author Jordan Partridge
+ * 
+ * 
+ * 
+ */
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader; 
+public class magicSquare {
+	public static void main(String args[]) throws IOException{
+	    BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
+
+		System.out.println("Please enter numbers for magic square:");
+		stdin.readLine();
+	}
+}
